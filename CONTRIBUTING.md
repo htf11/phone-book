@@ -1,4 +1,5 @@
 # How contribute to this project
+
 For contributing on this project you must use [Conventional Commits](https://www.conventionalcommits.org/ru/v1.0.0/)
 
 Example: `feat: update README.md`
