@@ -4,35 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my phone book</title>
+    <link href="../css/registration.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img
-        src="../sources/logo.png"
-        alt="Логотип приложения Телефонная книга">
-        <h1>ТЕЛЕФОННАЯ КНИГА</h1>
+    <header class="header">
+         <div class="logo-group">
+            <img class="header-logo"
+            src="../sources/logo.png"
+            alt="Логотип приложения Телефонная книга">
+            <div class="heading">
+                <h1>ТЕЛЕФОННАЯ</h1>
+                <h1>КНИГА</h1>
+            </div>
+        </div>
     </header>
-    <form>
-        <label for="login-field">ЛОГИН</label>
-        <input
-        type="text"
-        name="username"
-        id="login-field"
-        >
-        <label for="password-field">ПАРОЛЬ</label>
-        <input
-        type="password"
-        name="password"
-        id="password-field"
-        >
-        <label for="password-field_1">ПОДТВЕРДИТЬ ПАРОЛЬ</label>
-        <input
-        type="password"
-        name="password"
-        id="password-field_1"
-        >
-        <button>СОЗДАТЬ</button>
-        <a href="../index.html">ОТМЕНА</a>
+    <form class="form-container">
+        <div class="input-fields">
+            <label for="login-field">ЛОГИН</label>
+            <input
+            type="text"
+            name="username"
+            id="login-field"
+            >
+            <label for="password-field">ПАРОЛЬ</label>
+            <input
+            type="password"
+            name="password"
+            id="password-field"
+            >
+            <label for="password-field_1">ПОДТВЕРДИТЬ ПАРОЛЬ</label>
+            <input
+            type="password"
+            name="password"
+            id="password-field_1"
+            >
+        </div>
+        <div class="button-create-cancel">    
+            <button>СОЗДАТЬ</button>
+            <a href="../index.html">ОТМЕНА</a>
+        </div>
     </form>
 </body>
 </html>

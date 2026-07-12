@@ -1,0 +1,109 @@
+body {
+  font-family: "Actay", sans-serif;
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.header-logo {
+  width: 100px;
+  height: auto;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header {
+  background-color: #121212;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo-group h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 24px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 550px;
+  margin: 60px auto 0 auto;
+  padding: 30px 0;
+  border-radius: 12px;
+  background-color: #121212;
+}
+.form-container .input-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.form-container .input-fields input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+}
+.form-container .button-create-cancel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.form-container .button-create-cancel button {
+  border: none;
+  outline: none;
+  font-family: "ActayWide", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #00FF11;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-container .button-create-cancel button:hover {
+  background-color: #00B80C;
+  transform: translateY(-1px);
+}
+.form-container .button-create-cancel button:active {
+  transform: translateY(1px);
+}
+.form-container .button-create-cancel a {
+  border: none;
+  outline: none;
+  font-family: "ActayWide", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #FF3700;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-container .button-create-cancel a:hover {
+  background-color: #B72800;
+  transform: translateY(-1px);
+}
+.form-container .button-create-cancel a:active {
+  transform: translateY(1px);
+}/*# sourceMappingURL=registration.css.map */

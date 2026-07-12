@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my phone book</title>
+    <link href="../css/index.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img
-        src="../sources/logo.png"
-        alt="Логотип приложения Телефонная книга">
-        <h1>ТЕЛЕФОННАЯ КНИГА</h1>
+    <header class="header">
+        <div class="logo-group">
+            <img class="header-logo"
+            src="../sources/logo.png"
+            alt="Логотип приложения Телефонная книга">
+            <div class="heading">
+                <h1>ТЕЛЕФОННАЯ</h1>
+                <h1>КНИГА</h1>
+            </div>
+        </div>
         <button>ВЫХОД</button>
     </header>
 
-    <form>
+    <form class="search">
         <input
             type="search"
             placeholder="введите имя">
@@ -39,7 +45,7 @@
         </tr>
         <tr>
             <td>Вася Пупкин</td>
-            <td>+7 777 777 77 77</td>
+            <td>+7 67 67 67 67</td>
             <td>228</td>
             <td>vasyapupkin@gmail.ru</td>
         </tr>

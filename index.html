@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my phone book</title>
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img
-        src="../sources/logo.png"
-        alt="Логотип приложения Телефонная книга">
-        <h1>ТЕЛЕФОННАЯ КНИГА</h1>
+    <header class="header">
+         <div class="logo-group">
+            <img class="header-logo"
+            src="../sources/logo.png"
+            alt="Логотип приложения Телефонная книга">
+            <div class="heading">
+                <h1>ТЕЛЕФОННАЯ</h1>
+                <h1>КНИГА</h1>
+            </div>
+        </div>
     </header>
-    <form>
-        <label for="login-field">ЛОГИН</label>
-        <input
-        type="text"
-        name="username"
-        id="login-field"
-        >
-        <label for="password-field">ПАРОЛЬ</label>
-        <input
-        type="password"
-        name="password"
-        id="password-field"
-        >
-        <button>ВХОД</button>
-        <a href="html/registration.html">РЕГИСТРАЦИЯ</a>
+    <form class="auth-container">
+            <div class="login-password">
+                <label for="login-field">ЛОГИН</label>
+                <input
+                type="text"
+                name="username"
+                id="login-field"
+                >
+                <label for="password-field">ПАРОЛЬ</label>
+                <input
+                type="password"
+                name="password"
+                id="password-field"
+                >
+            </div>
+            <div class="button-input-registration">
+                <button class="button-input">ВХОД</button>
+                <a class="button-registration" href="html/registration.html">РЕГИСТРАЦИЯ</a>
+            </div> 
     </form>
 </body>
 </html>
