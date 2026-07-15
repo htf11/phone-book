@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my phone book</title>
+    <title>my phone book - registration</title>
     <link href="../css/registration.css" rel="stylesheet">
+    
+    <script type="module" src="https://esm.run/@material/web/all.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
 </head>
 <body>
     <header class="header">
@@ -18,30 +21,19 @@
             </div>
         </div>
     </header>
-    <form class="form-container">
+
+    <form class="form-container" onsubmit="event.preventDefault();">
         <div class="input-fields">
-            <label for="login-field">ЛОГИН</label>
-            <input
-            type="text"
-            name="username"
-            id="login-field"
-            >
-            <label for="password-field">ПАРОЛЬ</label>
-            <input
-            type="password"
-            name="password"
-            id="password-field"
-            >
-            <label for="password-field_1">ПОДТВЕРДИТЬ ПАРОЛЬ</label>
-            <input
-            type="password"
-            name="password"
-            id="password-field_1"
-            >
+            <md-outlined-text-field label="ЛОГИН" name="username" class="reg-input"></md-outlined-text-field>
+            <md-outlined-text-field label="ПАРОЛЬ" name="password" type="password" class="reg-input"></md-outlined-text-field>
+            <md-outlined-text-field label="ПОВТОР ПАРОЛЯ" name="password-confirm" type="password" class="reg-input"></md-outlined-text-field>
         </div>
+        
         <div class="button-create-cancel">    
-            <button>СОЗДАТЬ</button>
-            <a href="../index.html">ОТМЕНА</a>
+            <md-filled-button type="submit" class="btn-register">СОЗДАТЬ</md-filled-button>
+            <md-outlined-button type="button" class="btn-back" onclick="window.location.href='../index.html'">
+                НАЗАД
+            </md-outlined-button>
         </div>
     </form>
 </body>

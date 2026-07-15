@@ -1,0 +1,112 @@
+$bg-main: #242424;
+$bg-header: #121212;
+$color-white: #ffffff;
+$color-green: #00FF11;
+$color-red: #FF3700;
+$color-gray: #aaaaaa;
+
+$font-primary: 'Actay', sans-serif;
+$font-wide: 'ActayWide', sans-serif;
+
+:root {
+  --md-sys-font-family: '#{$font-primary}';
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $bg-main;
+  color: $color-white;
+}
+
+.header-logo {
+  width: 100px;
+  height: auto;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header {
+  background-color: $bg-header;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    h1 {
+      color: $color-white;
+      margin: 0;
+      font-size: 24px;
+    }
+  }
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 550px;
+  margin: 60px auto 0 auto;
+  padding: 30px 0;
+  border-radius: 12px;
+  background-color: $bg-header;
+
+  .input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .button-create-cancel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.add-input {
+  width: 240px;
+
+  --md-outlined-text-field-input-text-color: #{$color-white};
+  --md-outlined-text-field-focus-input-text-color: #{$color-white};
+  --md-sys-color-on-surface: #{$color-white};
+  --md-outlined-text-field-caret-color: #{$color-white};
+
+  --md-outlined-text-field-label-text-color: #{$color-gray};
+  --md-outlined-text-field-focus-label-text-color: #{$color-green};
+
+  --md-outlined-text-field-outline-color: #{$color-white};
+  --md-outlined-text-field-focus-outline-color: #{$color-green};
+}
+
+.btn-create {
+  width: 100%;
+  --md-sys-color-primary: #{$color-green};
+  --md-sys-color-on-primary: #{$bg-header};
+  
+  font-family: $font-wide;
+  font-weight: 700;
+}
+
+.btn-cancel {
+  width: 100%;
+  --md-outlined-button-outline-color: #{$color-red};
+  --md-outlined-button-focus-outline-color: #{$color-red};
+  --md-outlined-button-label-text-color: #{$color-red};
+  --md-outlined-button-focus-label-text-color: #{$color-red};
+  
+  font-family: $font-wide;
+  font-weight: 700;
+}

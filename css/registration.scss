@@ -1,9 +1,19 @@
 $white: #ffffff;
 $bg-color: #242424;
 $head-color: #121212;
+$color-green: #00FF11;
+$color-red: #FF3700;
+$color-gray: #aaaaaa;
+
+$font-primary: 'Actay', sans-serif;
+$font-wide: 'ActayWide', sans-serif;
+
+:root {
+  --md-sys-font-family: '#{$font-primary}';
+}
 
 body {
-    font-family: 'Actay', sans-serif;
+    font-family: $font-primary;
     background-color: $bg-color;
     color: $white;
 }
@@ -21,7 +31,7 @@ body {
 
 .header {
     background-color: $head-color;
-    padding: 15px 30px;   
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +43,7 @@ body {
     gap: 15px;
 
     h1 {
-        color: #ffffff;
+        color: $white;
         margin: 0;
         font-size: 24px;
     }
@@ -52,83 +62,55 @@ body {
     padding: 30px 0;
     border-radius: 12px;
 
-    background-color: #121212;
+    background-color: $head-color;
 
     .input-fields {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
-
-        input {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            background-color: $white;
-            color: #000000;
-            border: none;
-            border-radius: 20px;
-        }
+        gap: 12px;
     }
 
     .button-create-cancel {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
-
-        button {
-            border: none;
-            outline: none;
-
-            font-family: 'ActayWide', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-
-            background-color: #00FF11;
-            color: white;
-
-            padding: 10px 20px;
-            border-radius: 6px;
-
-            cursor: pointer;
-            transition: all 0.3s ease;
-
-            &:hover {
-                background-color: #00B80C;
-                transform: translateY(-1px);
-            }
-
-            &:active {
-                transform: translateY(1px);
-            }
-        }
-
-        a {
-            border: none;
-            outline: none;
-
-            font-family: 'ActayWide', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-
-            background-color: #FF3700;
-            color: white;
-
-            padding: 10px 20px;
-            border-radius: 6px;
-
-            cursor: pointer;
-            transition: all 0.3s ease;
-
-            &:hover {
-                background-color: #B72800;
-                transform: translateY(-1px);
-            }
-
-            &:active {
-                transform: translateY(1px);
-            }
-        }
+        gap: 12px;
     }
+}
+
+.reg-input {
+    width: 240px;
+
+    --md-outlined-text-field-input-text-color: #{$white};
+    --md-outlined-text-field-focus-input-text-color: #{$white};
+    --md-sys-color-on-surface: #{$white};
+    --md-sys-color-on-surface-variant: #{$white};
+    --md-outlined-text-field-caret-color: #{$white};
+
+    --md-outlined-text-field-label-text-color: #{$color-gray};
+    --md-outlined-text-field-focus-label-text-color: #{$color-green};
+
+    --md-outlined-text-field-outline-color: #{$white};
+    --md-outlined-text-field-focus-outline-color: #{$color-green};
+}
+
+.btn-register {
+    width: 100%;
+    --md-sys-color-primary: #{$color-green};
+    --md-sys-color-on-primary: #{$head-color};
+    
+    font-family: $font-wide;
+    font-weight: 700;
+}
+
+.btn-back {
+    width: 100%;
+    --md-outlined-button-outline-color: #{$color-red};
+    --md-outlined-button-focus-outline-color: #{$color-red};
+    --md-outlined-button-label-text-color: #{$color-red};
+    --md-outlined-button-focus-label-text-color: #{$color-red};
+    
+    font-family: $font-wide;
+    font-weight: 700;
 }

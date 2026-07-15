@@ -26,13 +26,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
-.logo-group {
+.header .logo-group {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.logo-group h1 {
+.header .logo-group h1 {
   color: #ffffff;
   margin: 0;
   font-size: 24px;
@@ -63,12 +62,11 @@ body {
   gap: 12px;
 }
 
-.reg-input {
+.add-input {
   width: 240px;
   --md-outlined-text-field-input-text-color: #ffffff;
   --md-outlined-text-field-focus-input-text-color: #ffffff;
   --md-sys-color-on-surface: #ffffff;
-  --md-sys-color-on-surface-variant: #ffffff;
   --md-outlined-text-field-caret-color: #ffffff;
   --md-outlined-text-field-label-text-color: #aaaaaa;
   --md-outlined-text-field-focus-label-text-color: #00FF11;
@@ -76,7 +74,7 @@ body {
   --md-outlined-text-field-focus-outline-color: #00FF11;
 }
 
-.btn-register {
+.btn-create {
   width: 100%;
   --md-sys-color-primary: #00FF11;
   --md-sys-color-on-primary: #121212;
@@ -84,7 +82,7 @@ body {
   font-weight: 700;
 }
 
-.btn-back {
+.btn-cancel {
   width: 100%;
   --md-outlined-button-outline-color: #FF3700;
   --md-outlined-button-focus-outline-color: #FF3700;
@@ -92,4 +90,4 @@ body {
   --md-outlined-button-focus-label-text-color: #FF3700;
   font-family: "ActayWide", sans-serif;
   font-weight: 700;
-}/*# sourceMappingURL=registration.css.map */
+}/*# sourceMappingURL=add-record.css.map */
