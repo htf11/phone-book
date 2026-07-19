@@ -1,42 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my phone book</title>
-    <link href="css/index.css" rel="stylesheet">
-</head>
-<body>
-    <header class="header">
-         <div class="logo-group">
-            <img class="header-logo"
-            src="../sources/logo.png"
-            alt="Логотип приложения Телефонная книга">
-            <div class="heading">
-                <h1>ТЕЛЕФОННАЯ</h1>
-                <h1>КНИГА</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>my phone book</title>
+        <link href="css/index.css" rel="stylesheet" />
+
+        <script
+            type="module"
+            src="https://esm.run/@material/web/all.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo-group">
+                <img
+                    class="header-logo"
+                    src="../sources/logo.png"
+                    alt="Логотип приложения Телефонная книга"
+                />
+                <div class="heading">
+                    <h1>ТЕЛЕФОННАЯ</h1>
+                    <h1>КНИГА</h1>
+                </div>
             </div>
-        </div>
-    </header>
-    <form class="auth-container">
+        </header>
+
+        <form class="auth-container" onsubmit="event.preventDefault()">
             <div class="login-password">
-                <label for="login-field">ЛОГИН</label>
-                <input
-                type="text"
-                name="username"
-                id="login-field"
+                <md-outlined-text-field
+                    label="ЛОГИН"
+                    name="username"
+                    class="auth-input"
                 >
-                <label for="password-field">ПАРОЛЬ</label>
-                <input
-                type="password"
-                name="password"
-                id="password-field"
+                </md-outlined-text-field>
+
+                <md-outlined-text-field
+                    label="ПАРОЛЬ"
+                    type="password"
+                    name="password"
+                    class="auth-input"
                 >
+                </md-outlined-text-field>
             </div>
+
             <div class="button-input-registration">
-                <button class="button-input">ВХОД</button>
-                <a class="button-registration" href="html/registration.html">РЕГИСТРАЦИЯ</a>
-            </div> 
-    </form>
-</body>
+                <md-filled-button
+                    type="submit"
+                    class="btn-login"
+                    onclick="window.location.href = 'html/main.html'"
+                >
+                    ВХОД
+                </md-filled-button>
+                <md-outlined-button
+                    type="button"
+                    class="btn-reg"
+                    onclick="window.location.href = 'html/registration.html'"
+                >
+                    РЕГИСТРАЦИЯ
+                </md-outlined-button>
+            </div>
+        </form>
+    </body>
 </html>

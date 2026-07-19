@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>my phone book</title>
+        <link href="../css/add-record.css" rel="stylesheet" />
+        <script
+            type="module"
+            src="https://esm.run/@material/web/all.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo-group">
+                <img
+                    class="header-logo"
+                    src="../sources/logo.png"
+                    alt="Логотип приложения Телефонная книга"
+                />
+                <div class="heading">
+                    <h1>ТЕЛЕФОННАЯ</h1>
+                    <h1>КНИГА</h1>
+                </div>
+            </div>
+        </header>
+
+        <form class="form-container" onsubmit="event.preventDefault()">
+            <div class="input-fields">
+                <md-outlined-text-field
+                    label="ИМЯ"
+                    name="username"
+                    class="add-input"
+                ></md-outlined-text-field>
+                <md-outlined-text-field
+                    label="ТЕЛЕФОН"
+                    name="phone"
+                    type="tel"
+                    class="add-input"
+                ></md-outlined-text-field>
+                <md-outlined-text-field
+                    label="№ КОМНАТЫ"
+                    name="room"
+                    class="add-input"
+                ></md-outlined-text-field>
+                <md-outlined-text-field
+                    label="EMAIL"
+                    name="email"
+                    type="email"
+                    class="add-input"
+                ></md-outlined-text-field>
+            </div>
+
+            <div class="button-create-cancel">
+                <md-filled-button type="submit" class="btn-create"
+                    >СОЗДАТЬ</md-filled-button
+                >
+                <md-outlined-button
+                    type="button"
+                    class="btn-cancel"
+                    onclick="window.location.href = 'main.html'"
+                >
+                    ОТМЕНА
+                </md-outlined-button>
+            </div>
+        </form>
+    </body>
+</html>

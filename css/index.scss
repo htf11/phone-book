@@ -1,0 +1,211 @@
+$white: #ffffff;
+$bg-color: #242424;
+$head-color: #121212;
+$color-green: #00FF11;
+$color-red: #FF3700;
+$color-gray: #aaaaaa;
+
+$font-primary: 'Actay', sans-serif;
+$font-wide: 'ActayWide', sans-serif;
+
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ActayWide';
+    src: url('../fonts/ActayWide-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ActayWide';
+    src: url('../fonts/ActayWide-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+:root {
+  --md-sys-font-family: '#{$font-primary}';
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $bg-color;
+    color: $white;
+}
+
+.header-logo {
+    width: 100px;
+    height: auto;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header {
+    background-color: $head-color;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button:active {
+         transform: translateY(1px);
+    }
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    h1 {
+        color: $white;
+        margin: 0;
+        font-size: 24px;
+    }
+}
+
+.btn-logout {
+    --md-sys-color-primary: #{$color-red};
+    --md-sys-color-on-primary: #{$white};
+    font-family: $font-wide;
+    font-weight: 700;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    padding: 0 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.search-input {
+    --md-outlined-text-field-input-text-color: #{$white};
+    --md-outlined-text-field-focus-input-text-color: #{$white};
+    --md-sys-color-on-surface: #{$white};
+    --md-sys-color-on-surface-variant: #{$white};
+    --md-outlined-text-field-caret-color: #{$white};             
+    --md-outlined-text-field-label-text-color: #{$color-gray};          
+    --md-outlined-text-field-focus-label-text-color: #{$white};    
+    --md-outlined-text-field-outline-color: #{$white};            
+    --md-outlined-text-field-focus-outline-color: #{$white};      
+    
+    font-family: $font-primary;
+}
+
+.search-btn {
+    --md-sys-color-primary: #{$head-color};
+    --md-sys-color-on-primary: #{$white};
+    font-family: $font-wide;
+    font-weight: 700;
+}
+
+.add {
+    --md-sys-color-primary: #{$head-color};
+    --md-sys-color-on-primary: #{$white};
+    font-family: $font-wide;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    td, th {
+        border: 1px solid $white;
+        padding: 12px 16px;
+        text-align: left;
+    }
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 550px;
+
+    margin: 60px auto 0 auto;
+    padding: 30px 0;
+    border-radius: 12px;
+
+    background-color: $head-color;
+
+    .login-password {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .button-input-registration {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.auth-input {
+    width: 240px;
+
+    --md-outlined-text-field-input-text-color: #{$white};
+    --md-outlined-text-field-focus-input-text-color: #{$white};
+    --md-sys-color-on-surface: #{$white};
+    --md-sys-color-on-surface-variant: #{$white};
+    --md-outlined-text-field-caret-color: #{$white};
+
+    --md-outlined-text-field-label-text-color: #{$color-gray};
+    --md-outlined-text-field-focus-label-text-color: #{$color-green};
+
+    --md-outlined-text-field-outline-color: #{$white};
+    --md-outlined-text-field-focus-outline-color: #{$color-green};
+}
+
+.btn-login {
+    width: 100%;
+    --md-sys-color-primary: #{$color-green};
+    --md-sys-color-on-primary: #{$head-color};
+    
+    font-family: $font-wide;
+    font-weight: 700;
+}
+
+.btn-reg {
+    width: 100%;
+    --md-outlined-button-outline-color: #{$color-red};
+    --md-outlined-button-focus-outline-color: #{$color-red};
+    --md-outlined-button-label-text-color: #{$color-red};
+    --md-outlined-button-focus-label-text-color: #{$color-red};
+    
+    font-family: $font-wide;
+    font-weight: 700;
+}

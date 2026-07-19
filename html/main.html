@@ -1,85 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my phone book</title>
-    <link href="../css/index.css" rel="stylesheet">
-</head>
-<body>
-    <header class="header">
-        <div class="logo-group">
-            <img class="header-logo"
-            src="../sources/logo.png"
-            alt="Логотип приложения Телефонная книга">
-            <div class="heading">
-                <h1>ТЕЛЕФОННАЯ</h1>
-                <h1>КНИГА</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>my phone book</title>
+        <link href="../css/index.css" rel="stylesheet" />
+        <script
+            type="module"
+            src="https://esm.run/@material/web/all.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo-group">
+                <img
+                    class="header-logo"
+                    src="../sources/logo.png"
+                    alt="Логотип приложения Телефонная книга"
+                />
+                <div class="heading">
+                    <h1>ТЕЛЕФОННАЯ</h1>
+                    <h1>КНИГА</h1>
+                </div>
             </div>
+            <md-filled-button
+                class="btn-logout"
+                onclick="window.location.href = '../index.html'"
+                >ВЫХОД</md-filled-button
+            >
+        </header>
+
+        <div class="toolbar">
+            <md-filled-button
+                class="add"
+                onclick="window.location.href = 'add-record.html'"
+            >
+                ДОБАВИТЬ
+            </md-filled-button>
+            <form class="search" onsubmit="event.preventDefault()">
+                <md-outlined-text-field
+                    label="введите имя"
+                    type="search"
+                    class="search-input"
+                >
+                </md-outlined-text-field>
+                <md-filled-button type="submit" class="search-btn">
+                    ПОИСК
+                </md-filled-button>
+            </form>
         </div>
-        <button>ВЫХОД</button>
-    </header>
 
-    <form class="search">
-        <input
-            type="search"
-            placeholder="введите имя">
-        <button type="submit">ПОИСК</button>
-    </form>
-
-    <table>
-        <thead>
-        <tr>
-            <th>ИМЯ</th>
-            <th>ТЕЛЕФОН</th>
-            <th>КОМНАТА</th>
-            <th>E-MAIL</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Андрей Жопин</td>
-            <td>+7 777 777 77 77</td>
-            <td>777</td>
-            <td>andrewzhops@gmail.ru</td>
-        </tr>
-        <tr>
-            <td>Вася Пупкин</td>
-            <td>+7 67 67 67 67</td>
-            <td>228</td>
-            <td>vasyapupkin@gmail.ru</td>
-        </tr>
-        <tr>
-            <td>Алексей Смирнов</td>
-            <td>+7 916 123 45 67</td>
-            <td>101</td>
-            <td>alex.smirnov@yandex.ru</td>
-        </tr>
-        <tr>
-            <td>Екатерина Кузнецова</td>
-            <td>+7 925 987 65 43</td>
-            <td>204</td>
-            <td>katya.kuz@gmail.com</td>
-        </tr>
-        <tr>
-            <td>Дмитрий Петров</td>
-            <td>+7 903 555 44 33</td>
-            <td>312</td>
-            <td>dima_petrov@mail.ru</td>
-        </tr>
-        <tr>
-            <td>Ольга Соколова</td>
-            <td>+7 999 444 55 66</td>
-            <td>007</td>
-            <td>soko.olga@rambler.ru</td>
-        </tr>
-        <tr>
-            <td>Иван Васильевич</td>
-            <td>+7 707 333 22 11</td>
-            <td>999</td>
-            <td>tsar.ivan@mail.ru</td>
-        </tr>
-        </tbody>
-    </table>
-</body>
+        <table>
+            <thead>
+                <tr>
+                    <th>ИМЯ</th>
+                    <th>ТЕЛЕФОН</th>
+                    <th>КОМНАТА</th>
+                    <th>E-MAIL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Андрей Жопин</td>
+                    <td>+7 777 777 77 77</td>
+                    <td>777</td>
+                    <td>andrewzhops@gmail.ru</td>
+                </tr>
+                <tr>
+                    <td>Вася Пупкин</td>
+                    <td>+7 67 67 67 67</td>
+                    <td>228</td>
+                    <td>vasyapupkin@gmail.ru</td>
+                </tr>
+                <tr>
+                    <td>Алексей Смирнов</td>
+                    <td>+7 916 123 45 67</td>
+                    <td>101</td>
+                    <td>alex.smirnov@yandex.ru</td>
+                </tr>
+                <tr>
+                    <td>Екатерина Кузнецова</td>
+                    <td>+7 925 987 65 43</td>
+                    <td>204</td>
+                    <td>katya.kuz@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Дмитрий Петров</td>
+                    <td>+7 903 555 44 33</td>
+                    <td>312</td>
+                    <td>dima_petrov@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Ольга Соколова</td>
+                    <td>+7 999 444 55 66</td>
+                    <td>007</td>
+                    <td>soko.olga@rambler.ru</td>
+                </tr>
+                <tr>
+                    <td>Иван Васильевич</td>
+                    <td>+7 707 333 22 11</td>
+                    <td>999</td>
+                    <td>tsar.ivan@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Алексей Смирнов</td>
+                    <td>+7 916 123 45 67</td>
+                    <td>101</td>
+                    <td>alex.smirnov@yandex.ru</td>
+                </tr>
+                <tr>
+                    <td>Екатерина Кузнецова</td>
+                    <td>+7 925 987 65 43</td>
+                    <td>204</td>
+                    <td>katya.kuz@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Дмитрий Петров</td>
+                    <td>+7 903 555 44 33</td>
+                    <td>312</td>
+                    <td>dima_petrov@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Ольга Соколова</td>
+                    <td>+7 999 444 55 66</td>
+                    <td>007</td>
+                    <td>soko.olga@rambler.ru</td>
+                </tr>
+                <tr>
+                    <td>Иван Васильевич</td>
+                    <td>+7 707 333 22 11</td>
+                    <td>999</td>
+                    <td>tsar.ivan@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Алексей Смирнов</td>
+                    <td>+7 916 123 45 67</td>
+                    <td>101</td>
+                    <td>alex.smirnov@yandex.ru</td>
+                </tr>
+                <tr>
+                    <td>Екатерина Кузнецова</td>
+                    <td>+7 925 987 65 43</td>
+                    <td>204</td>
+                    <td>katya.kuz@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Дмитрий Петров</td>
+                    <td>+7 903 555 44 33</td>
+                    <td>312</td>
+                    <td>dima_petrov@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Ольга Соколова</td>
+                    <td>+7 999 444 55 66</td>
+                    <td>007</td>
+                    <td>soko.olga@rambler.ru</td>
+                </tr>
+                <tr>
+                    <td>Иван Васильевич</td>
+                    <td>+7 707 333 22 11</td>
+                    <td>999</td>
+                    <td>tsar.ivan@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Алексей Смирнов</td>
+                    <td>+7 916 123 45 67</td>
+                    <td>101</td>
+                    <td>alex.smirnov@yandex.ru</td>
+                </tr>
+                <tr>
+                    <td>Екатерина Кузнецова</td>
+                    <td>+7 925 987 65 43</td>
+                    <td>204</td>
+                    <td>katya.kuz@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Дмитрий Петров</td>
+                    <td>+7 903 555 44 33</td>
+                    <td>312</td>
+                    <td>dima_petrov@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Ольга Соколова</td>
+                    <td>+7 999 444 55 66</td>
+                    <td>007</td>
+                    <td>soko.olga@rambler.ru</td>
+                </tr>
+                <tr>
+                    <td>Иван Васильевич</td>
+                    <td>+7 707 333 22 11</td>
+                    <td>999</td>
+                    <td>tsar.ivan@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Алексей Смирнов</td>
+                    <td>+7 916 123 45 67</td>
+                    <td>101</td>
+                    <td>alex.smirnov@yandex.ru</td>
+                </tr>
+                <tr>
+                    <td>Екатерина Кузнецова</td>
+                    <td>+7 925 987 65 43</td>
+                    <td>204</td>
+                    <td>katya.kuz@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Дмитрий Петров</td>
+                    <td>+7 903 555 44 33</td>
+                    <td>312</td>
+                    <td>dima_petrov@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Ольга Соколова</td>
+                    <td>+7 999 444 55 66</td>
+                    <td>007</td>
+                    <td>soko.olga@rambler.ru</td>
+                </tr>
+                <tr>
+                    <td>Иван Васильевич</td>
+                    <td>+7 707 333 22 11</td>
+                    <td>999</td>
+                    <td>tsar.ivan@mail.ru</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
 </html>
